@@ -1,6 +1,6 @@
 package com.technicaldc.demo;
 
-public class SoftwareEngineer{
+public class SoftwareEngineer {
 	private Integer id;
 	private String name;
 	private String techStack;
@@ -12,4 +12,29 @@ public class SoftwareEngineer{
 		this.name = name;
 		this.techStack = techStack;
 	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getTechStack() {
+		return techStack;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setTechStack(String techStack) {
+		this.techStack = techStack;
+	}
+
 }
