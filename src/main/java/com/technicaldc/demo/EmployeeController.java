@@ -7,28 +7,33 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 public class EmployeeController {
 	@Autowired
-	private EmployeeDAO employeeDAO;
+	private EmployeeDAO employeeDto;
 
 	@GetMapping("/")
 	public Employees getEmployees() {
-		return employeeDAO.getAllEmployees();
+		return employeeDto.getAllEmployees();
+	}
+
+	public Employee getEmployee(@RequestParam Integer id) {
+		return null;
 	}
 
 	@PostMapping("/")
 	public ResponseEntity<Object> addEmployee(@RequestBody Employee employee) {
-		Integer newId = employeeDAO
+		Integer newId = employeeDto
 			.getAllEmployees()
 			.getEmployeeList()
 			.size() + 1;
 
 		employee.setId(newId);
-		employeeDAO.addEmployee(employee);
+		employeeDto.addEmployee(employee);
 
 		URI location = ServletUriComponentsBuilder
 			.fromCurrentRequest()
