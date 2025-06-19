@@ -70,7 +70,7 @@
 		<dependency>
 			<artifactId>lombok</artifactId>
 			<groupId>org.projectlombok</groupId>
-			<!-- <scope>annotationProcessor</scope> -->
+			<scope>annotationProcessor</scope>
 		</dependency>
 	</dependencies>
 
