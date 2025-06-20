@@ -14,12 +14,26 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 
-	public List<UserEntity> getUsers() {
+	public List<UserEntity> fetchUsers() {
 		return userRepository.findAll();
+	}
+
+	public UserEntity fetchUser(Long id) {
+		return userRepository.findById(id).orElse(new UserEntity());
 	}
 
 	public UserEntity createUser(UserEntity user) {
 		userRepository.save(user);
 		return user;
+	}
+
+	public Message updateUser(UserEntity user) {
+		Message msg = new Message();
+
+		userRepository.save(user);
+		msg.setStatusCode("200");
+		msg.setMesg("Updated the record");
+
+		return msg;
 	}
 }
