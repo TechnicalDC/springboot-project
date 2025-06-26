@@ -1,7 +1,7 @@
 
-# 📝 Spring Boot Project – High-Level Summary
+# Spring Boot Project – High-Level Summary
 
-## 📌 Overview
+## Overview
 This is a Spring Boot application that follows a layered architecture using standard Java design patterns. It demonstrates how to:
 - Build RESTful APIs using Spring MVC
 - Persist data using Spring Data JPA
@@ -10,49 +10,49 @@ This is a Spring Boot application that follows a layered architecture using stan
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 com.technicaldc.demo
-├── DemoApplication.java         → Entry point of the Spring Boot application
-├── controller/                  → Exposes REST APIs
-│   └── UserController.java
-├── service/                     → Business logic layer
-│   ├── UserService.java
-│   └── Message.java             → Utility or response wrapper
-├── repository/                  → Interfaces for DB interaction
-│   └── UserRepository.java
-├── entity/                      → JPA-annotated persistence models
-│   └── UserEntity.java
-└── dto/                         → Objects for data transfer
-    └── UserDto.java
+1.  DemoApplication.java         → Entry point of the Spring Boot application
+2.  controller/                  → Exposes REST APIs
+    2.1  UserController.java
+3.  service/                     → Business logic layer
+    3.1  UserService.java
+    3.2  Message.java            → Utility or response wrapper
+4.  repository/                  → Interfaces for DB interaction
+    4.1  UserRepository.java
+5.  entity/                      → JPA-annotated persistence models
+    5.1  UserEntity.java
+6.  dto/                         → Objects for data transfer
+    6.1  UserDto.java
 ```
 
 ---
 
-## 🔄 Key Concepts & Definitions
+## Key Concepts & Definitions
 
-### 🧱 Spring Boot
+### Spring Boot
 Spring Boot is a Java framework that simplifies building production-ready Spring applications by minimizing boilerplate code and configuration.
 
-### 🧩 REST Controller
+### REST Controller
 Marked with `@RestController`, these components expose HTTP endpoints (GET, POST, etc.) to handle client requests.
 
-### 💡 Service Layer
+### Service Layer
 Contains business logic, ensuring that controllers are thin and only manage request/response handling.
 
-### 🗃️ Repository Layer
+### Repository Layer
 Interfaces extending `JpaRepository` to allow automatic implementation of common CRUD operations using Spring Data JPA.
 
-### 🗄️ Entity
+### Entity
 A POJO annotated with `@Entity` representing a table in the database.
 
-### 📦 DTO (Data Transfer Object)
+### DTO (Data Transfer Object)
 An object used to transfer data between different layers or systems. It helps decouple internal data models from what is exposed externally.
 
 ---
 
-## 🧠 Layer-by-Layer Breakdown
+## Layer-by-Layer Breakdown
 
 ### 1. `DemoApplication.java`
 - This is the **main class** with the `@SpringBootApplication` annotation.
@@ -86,16 +86,16 @@ An object used to transfer data between different layers or systems. It helps de
 
 ### 7. Utility – `Message.java`
 - Likely a wrapper for uniform API responses like:
-  ```json
-  {
+```json
+{
     "message": "Operation successful",
-    "status": "SUCCESS"
-  }
-  ```
+        "status": "SUCCESS"
+}
+```
 
 ---
 
-## ⚙️ Configuration & Build Tools
+## Configuration & Build Tools
 
 ### `pom.xml`
 This Maven file includes:
@@ -114,21 +114,6 @@ spring.jpa.hibernate.ddl-auto=update
 
 ---
 
-## 🧪 Testing
+## Testing
 - Basic test class `DemoApplicationTests` exists in the test folder
-- Likely uses JUnit 5 with Spring Boot’s test runner
 
----
-
-## ✅ Summary
-
-This project is a great example of:
-- **Clean, layered architecture**
-- **Use of DTOs to separate API from internal DB structure**
-- **Seamless DB integration with Spring Data JPA**
-- **RESTful service development using Spring Boot**
-
-It is suitable for:
-- Beginners learning Spring Boot
-- Bootstrapping real-world CRUD applications
-- Extending into full-fledged enterprise services (with security, pagination, validation, etc.)
