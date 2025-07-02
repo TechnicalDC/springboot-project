@@ -1,5 +1,15 @@
-
-# Spring Boot Project – High-Level Summary
+---
+title: Spring Boot Project – High-Level Summary
+author: Dilip Chauhan
+fontfamily: CormorantGaramond
+classoption:
+  - 12pt
+header-includes:
+  - \usepackage{pmboxdraw}
+geometry:
+- top=30mm
+- left=20mm
+---
 
 ## Overview
 This is a Spring Boot application that follows a layered architecture using standard Java design patterns. It demonstrates how to:
