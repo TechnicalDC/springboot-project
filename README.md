@@ -1,11 +1,13 @@
 ---
 title: Spring Boot Project – High-Level Summary
 author: Dilip Chauhan
-fontfamily: CormorantGaramond
+mainfont: Roboto Serif
+monofont: FantasqueSansM Nerd Font
 classoption:
-  - 12pt
+  - 10pt
 header-includes:
   - \usepackage{pmboxdraw}
+  - \usepackage{fontspec}
 geometry:
 - top=30mm
 - left=20mm
@@ -24,18 +26,18 @@ This is a Spring Boot application that follows a layered architecture using stan
 
 ```
 com.technicaldc.demo
-1.  DemoApplication.java         → Entry point of the Spring Boot application
-2.  controller/                  → Exposes REST APIs
-    2.1  UserController.java
-3.  service/                     → Business logic layer
-    3.1  UserService.java
-    3.2  Message.java            → Utility or response wrapper
-4.  repository/                  → Interfaces for DB interaction
-    4.1  UserRepository.java
-5.  entity/                      → JPA-annotated persistence models
-    5.1  UserEntity.java
-6.  dto/                         → Objects for data transfer
-    6.1  UserDto.java
+├── DemoApplication.java         # Entry point of the Spring Boot application
+├── controller/                  # Exposes REST APIs
+│   └── UserController.java
+├── service/                     # Business logic layer
+│   ├── UserService.java
+│   └── Message.java             # Utility or response wrapper
+├── repository/                  # Interfaces for DB interaction
+│   └── UserRepository.java
+├── entity/                      # JPA-annotated persistence models
+│   └── UserEntity.java
+└── dto/                         # Objects for data transfer
+    └── UserDto.java
 ```
 
 ---
